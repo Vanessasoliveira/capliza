@@ -1,0 +1,103 @@
+<div class="div" *ngIf="cadastroForm">
+  <table>
+    <tr>
+      <td>
+        <form [formGroup]="cadastroForm" (ngSubmit)="submitForm()">
+          <h1 class="title">Olá, preencha seus dados!</h1>
+
+           <label class="label">
+             Nome completo:
+             <input type="text" formControlName="fullName" class="input" placeholder="Nome" autofocus required>
+             <div class="warm" *ngIf="cadastroForm.get('fullName')?.errors && (cadastroForm.get('fullName')?.touched || cadastroForm.get('fullName')?.dirty)">
+              Por favor, escreva seu nome completo!
+             </div>
+
+          </label>
+          <br>
+          <br>
+          <label class="label">
+            CPF:
+            <input type="text" formControlName="cpf" class="input" placeholder="CPF" autofocus required>
+            <div class="warm" *ngIf="cadastroForm.get('cpf')?.errors && (cadastroForm.get('cpf')?.touched || cadastroForm.get('cpf')?.dirty)">
+             Campo obrigatório
+            </div>
+          </label>
+
+           <br>
+           <br>
+           <label class="label">
+            CNH:
+            <input type="text" formControlName="cnh" class="input" placeholder="CNH" autofocus required>
+            <div class="warm" *ngIf="cadastroForm.get('cnh')?.errors && (cadastroForm.get('cnh')?.touched || cadastroForm.get('cnh')?.dirty)">
+             Campo obrigatório
+            </div>
+          </label>
+
+           <br>
+           <br>
+
+
+           <label class="label">
+             Email:
+             <input type="email" formControlName="email" class="input" placeholder="E-mail" required>
+             <div class="warm" *ngIf="cadastroForm.get('email')?.errors && (cadastroForm.get('email')?.touched || cadastroForm.get('email')?.dirty)">
+              Por favor, escreva seu e-mail corretamente!
+             </div>
+           </label>
+           <br>
+           <br>
+
+           <label class="label">
+             Crie sua senha:
+             <input type="password" formControlName="password" required class="input" placeholder="Crie sua senha">
+             <div class="warm" *ngIf="cadastroForm.get('password')?.errors && (cadastroForm.get('password')?.touched || cadastroForm.get('password')?.dirty)">
+              A senha é obrigatória e com o mínimo de 7 caracteres.
+             </div>
+           </label>
+           <br>
+           <br>
+
+           <label class="label">
+             Confirme sua senha:
+             <input type="password" formControlName="confirmPassword" class="input" placeholder="Confirme sua senha" required>
+             <div class="warm" *ngIf="cadastroForm.get('confirmPassword')?.errors && (cadastroForm.get('confirmPassword')?.touched || cadastroForm.get('confirmPassword')?.dirty)">
+              A senha tem que ser igual a anterior.
+             </div>
+           </label>
+           <br>
+           <br>
+
+           <label class="label">
+             Celular:
+             <input class="input" type="phone" formControlName="phone" text-mask="phone" placeholder="Celular"  required class="input">
+             <div class="warm" *ngIf="cadastroForm.get('phone')?.errors && (cadastroForm.get('phone')?.touched || cadastroForm.get('phone')?.dirty)">
+              Campo obrigatório.
+             </div>
+           </label>
+           <br>
+           <br>
+
+           <button [disabled]="!cadastroForm.valid" class="button">Enviar</button>
+
+         </form>
+
+      </td>
+
+      <td>
+        <div class="image">
+          <img src="/assets/dirigindo.jpg">
+        </div>
+      </td>
+
+    </tr>
+
+
+  </table>
+
+
+  </div>
+
+
+
+
+

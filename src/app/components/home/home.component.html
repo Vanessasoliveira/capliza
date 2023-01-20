@@ -1,0 +1,53 @@
+<div>
+  <mat-card>
+    <div class="vertical-center" *ngIf="formReserva">
+
+      <form class="example-form" [formGroup]="formReserva">
+        <mat-form-field class="example-full-width">
+          <label class="color"> Local de retirada</label>
+          <br>
+          <input matInput placeholder="Local de retirada" formControlName="localRetirada" autofocus required>
+          <div class="warm" *ngIf="formReserva.get('localRetirada')?.errors && (formReserva.get('localRetirada')?.touched || formReserva.get('localRetirada')?.dirty)">
+            Campo obrigatório
+           </div>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <label class="color"> Data de retirada</label>
+          <br>
+          <input matInput placeholder="Data de retirada" formControlName="dataRetirada" type="date">
+          <div class="warm" *ngIf="formReserva.get('dataRetirada')?.errors && (formReserva.get('dataRetirada')?.touched || formReserva.get('dataRetirada')?.dirty)">
+            Campo obrigatório
+           </div>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <label class="color"> Local de devolução</label>
+          <br>
+          <input matInput formControlName="localDevolucao" placeholder="Local de devolução" required>
+          <div class="warm" *ngIf="formReserva.get('localDevolucao')?.errors && (formReserva.get('localDevolucao')?.touched || formReserva.get('localDevolucao')?.dirty)">
+            Campo obrigatório
+           </div>
+
+         </mat-form-field>
+
+
+
+        <mat-form-field class="example-full-width">
+          <label class="color"> Data de devolução</label>
+          <br>
+          <mat-label>Data de devolução</mat-label>
+          <input matInput placeholder="Data de devolução" formControlName="dataDevolucao" type="date" required>
+          <div class="warm" *ngIf="formReserva.get('dataDevolucao')?.errors && (formReserva.get('dataDevolucao')?.touched || formReserva.get('dataDevolucao')?.dirty)">
+            Campo obrigatório
+           </div>
+
+
+        </mat-form-field>
+
+      </form>
+
+    </div>
+  </mat-card>
+
+</div>

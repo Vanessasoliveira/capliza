@@ -1,1 +1,142 @@
 /* You can add global styles to this file, and also import other style files */
+@import '@angular/material/theming';
+@include mat-core();
+
+$custom-app-primary: mat-palette($mat-blue);
+$custom-app-secondary: mat-palette($mat-blue, 500, 700, 900);
+$custom-app-warn: mat-palette($mat-red);
+
+$custom-theme: mat-light-theme($custom-app-primary, $custom-app-secondary, $custom-app-warn);
+
+@include angular-material-theme($custom-theme);
+
+$primary-color: #2196F3;
+$icon-color: white;
+
+
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.section {
+  background-color: aquamarine;
+  width: 500px;
+  align-items: center;
+  padding: auto;
+  position: fixed;
+
+}
+
+.vertical-center {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  background-color: #1E88E5;
+  padding: 20px;
+}
+
+.mat-button {
+  padding: 5px;
+  font-size: large;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bold;
+
+}
+
+.input {
+  width: 250px;
+  height: 25px;
+  padding-left: 10 px;
+  border-radius: 4px;
+  border: #1E88E5;
+  border-color: #1E88E5;
+}
+
+.label {
+  font-size: 18px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #2196F3;
+  font-weight: bold;
+
+
+}
+
+.title {
+  font-size: 20;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #2196F3;
+  padding-left: 10px;
+  font-weight: bold;
+}
+
+.button {
+  font-size: 16;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #2196F3;
+  font-weight: bold;
+  align-items: center;
+  background-color: rgb(196, 238, 241);
+  width: 100px;
+  line-height: 30px;
+  padding: 0 20px;
+  text-transform: uppercase;
+  align-items: center;
+  border-radius: 30px;
+  border-color: #2196F3;
+  width: max-content;
+  padding-left: 10 px;
+  text-align: center;
+}
+
+.button:hover{
+  font-size: 16;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: white;
+  font-weight: bold;
+  align-items: center;
+  background-color: #1E88E5;
+  width: 100px;
+  line-height: 30px;
+  padding: 0 20px;
+  text-transform: uppercase;
+  align-items: center;
+  border-radius: 30px;
+  border-color: #2196F3;
+  width: max-content;
+  padding-left: 10 px;
+  text-align: center;
+
+}
+
+.div {
+
+  margin: 30px;
+}
+
+.h1 {
+  font-size: 24px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #2196F3;
+  font-weight: bold;
+
+}
+
+.warm{
+  font-size: 14px;
+  color: red;
+}
+
+
+
+/*$primary-color: #2196F3;
+$background-dark: $mat-blue;
+$background-light: #2196F3;
+$background-pale: $mat-light-blue;*/

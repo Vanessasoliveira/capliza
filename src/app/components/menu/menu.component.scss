@@ -1,0 +1,23 @@
+$background-moredark: #1E88E5;
+
+.mat-toolbar{
+  background-color: #2196F3;
+  height: 85px;
+}
+
+.espacamento-toolbar {
+  flex: 1 1 auto;
+}
+
+.mat-icon-button{
+  border: none;
+  text-align: center;
+  text-color: white;
+
+}
+
+
+.active{
+  background: $background-moredark;
+}
+

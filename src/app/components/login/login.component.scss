@@ -1,0 +1,44 @@
+
+
+
+.div{
+  -ms-flex-align: center;
+}
+
+:host{
+  form{
+    align-content: center;
+    padding: auto;
+    align-items: center;
+
+
+  }
+  .main-div{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .loginIcon{
+    color: #2196F3;
+    vertical-align: middle;
+    align-items: center;
+  }
+
+  .conteudo-login{
+    display: flex;
+    flex-direction: column;
+  }
+  .card-login{
+    width: 300px;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.4);
+  }
+
+  .espacamento-toolbar {
+    flex: 1 1 auto;
+  }
+
+}
+
+

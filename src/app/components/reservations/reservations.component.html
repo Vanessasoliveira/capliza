@@ -1,0 +1,44 @@
+<div class="div" *ngIf="reservationsQuery">
+  <table>
+    <tr>
+      <td>
+        <form [formGroup]="reservationsQuery" (ngSubmit)="submitForm()">
+          <h1 class="h1">Minhas reservas:</h1>
+
+          <label class="label"> Aqui você pode consultar e gerenciar suas reservas</label>
+          <br>
+          <br>
+
+           <label class="label">
+             CPF:
+             <input type="text" formControlName="cpf" class="input" placeholder="CPF" autofocus required>
+             <div class="warm" *ngIf="reservationsQuery.get('cpf')?.errors && (reservationsQuery.get('cpf')?.touched || reservationsQuery.get('cpf')?.dirty)">
+              Campo obrigatório
+             </div>
+           </label>
+
+          <label class="label">
+             Número da reserva:
+             <input type="text" formControlName="numeroReserva" placeholder="Número da reserva" class="input" required>
+             <div class="warm" *ngIf="reservationsQuery.get('numeroReserva')?.errors && (reservationsQuery.get('numeroReserva')?.touched || reservationsQuery.get('numeroReserva')?.dirty)">
+              Campo obrigatório
+             </div>
+
+           </label>
+           <span></span>
+
+           <button class="button"> Consultar</button>
+
+         </form>
+
+      </td>
+
+
+  </table>
+
+  </div>
+
+
+
+
+
